@@ -1,0 +1,37 @@
+class student  {
+	
+	   int rollno;
+	   String sname;
+	   
+}
+
+
+
+class studentdao {
+	
+	    public student getstudent (int rollno ) {
+	    	
+	        student s=new student();  //object student class 
+	        s.rollno =rollno;
+	         return s;
+	         
+	        
+	    }
+}
+
+
+public class demodao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	      studentdao dao = new studentdao();
+		  student  s1= dao.getstudent(12);
+		  
+		  System.out.println(s1.sname);
+	}
+
+}
+
+
+

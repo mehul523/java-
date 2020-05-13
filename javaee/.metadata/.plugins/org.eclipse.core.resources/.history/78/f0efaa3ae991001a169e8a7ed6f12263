@@ -1,0 +1,31 @@
+package com.mehul;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class sqservlet  extends HttpServlet{
+
+	 public void  doGet(HttpServletRequest req, HttpServletResponse res) throws IOException
+	 
+	 {
+     
+		   ////--->sesstion in seervlets ------>
+	   
+		      HttpSession session =req.getSession();
+		       int k= (int)session.getAttribute("k", k);
+		 
+		//  int k =(int) req.getAttribute("k");
+		  
+		   k=k*k;
+		  
+        PrintWriter  out=res.getWriter();
+        out.println("result  odf squere is:" +k);
+		 System.out.println("sq method");
+        
+	 }
+}

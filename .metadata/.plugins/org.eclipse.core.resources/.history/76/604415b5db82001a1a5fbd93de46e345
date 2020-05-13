@@ -1,0 +1,41 @@
+package polymorphism;
+class ani {
+	
+        void eat(){System.out.println("eating...");} 
+}
+
+class dog extends ani {
+	
+    void eat(){System.out.println("dog eating...");} 
+	
+}
+
+class cat  extends ani {
+	
+    void eat(){System.out.println("cat  eating...");} 
+	
+}
+
+class lion  extends ani {
+	
+    void eat(){System.out.println("lion eating...");} 
+	
+}
+
+
+public class runpoly2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ani a;
+		 
+       a=new dog();
+       a.eat();
+       a=new cat();
+       a.eat();
+       a=new lion();
+       a.eat();
+	}
+
+}

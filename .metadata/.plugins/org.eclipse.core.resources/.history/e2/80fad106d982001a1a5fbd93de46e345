@@ -1,0 +1,33 @@
+package polymorphism;
+
+
+class bike20 {
+	
+	  void run()
+	  {
+		  System.out.println("this is bike class.....");
+	  }
+}
+
+
+class honda1 extends bike9{
+	 void run()
+	  {
+		  System.out.println(" running  60 km....");
+	  }
+	
+}
+
+
+public class runtimeploymporupcasting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		bike9 b =new honda1();
+		b.run();
+
+	}
+
+}

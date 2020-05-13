@@ -1,0 +1,36 @@
+package multitreading;
+
+class table3 {
+	   
+	  synchronized static void print(int n) {
+		     for(int i=1;i<10;i++) {
+		    	
+		    	 System.out.println(n*i);;
+		    	 
+		    	 try {
+		    		    Thread.sleep(500);   
+		    	 }catch(Exception e) { }
+		     }
+	   }
+	
+}
+
+
+class multi1 extends Thread{
+	
+	public void run(){
+		table3.print(1);
+		
+	}
+	
+	
+}
+
+
+
+public class staticsybnexample {
+
+	    public static void main(String args[] ) {
+	    	
+	    }
+}
