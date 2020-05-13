@@ -1,0 +1,59 @@
+package multitreading;
+
+
+class table {
+	  
+	 void print(int n) {
+		 
+		 for(int i=1;i<=5;i++){  
+		     System.out.println(n*i);
+		     
+		     //sleep thread
+		     
+		     try{  
+		         Thread.sleep(400);  
+		        }catch(Exception e){System.out.println(e);}  
+		 }
+		 
+	 }
+}
+
+class mythread1  extends Thread {
+	
+	 table t;  //constroctor 
+	 mythread1(table t){
+		 this.t=t;
+			
+	 }
+	 
+	 public void run() {
+		 t.print(5); 
+	 }
+	
+}
+
+
+class Mythread2 extends Thread{  
+table t;  
+Mythread2(table t){  
+this.t=t;  
+}  
+public void run(){  
+t.print(100);  
+}  
+}  
+
+public class understandsprobliemsynco {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		table obj = new table();//only one object  
+		mythread1 t1=new mythread1(obj);  
+		Mythread2 t2=new Mythread2(obj);  
+		t1.start();  
+		t2.start();  
+	}
+
+}
